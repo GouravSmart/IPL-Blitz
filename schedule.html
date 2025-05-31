@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Schedule & Results</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #73e2f9;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1200px; /* Increased max-width to accommodate more cards side-by-side */
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            overflow-x: auto; /* Allows horizontal scrolling if cards exceed screen width */
+            padding: 20px 0;
+            justify-content: flex-start; /* Align items to the start */
+        }
+
+        .match-card {
+            background-color: #f9f9f9; /* Lighter background */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-width: 300px; /* Ensures cards have a minimum width */
+            flex-shrink: 0; /* Prevents cards from shrinking below min-width */
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ddd; /* Subtle border */
+            display: flex; /* Use flexbox for internal layout */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: space-between; /* Pushes button to bottom */
+        }
+
+        .match-type {
+            background-color: #e0e0e0;
+            color: #555;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+            display: inline-block; /* Ensures padding and border-radius apply correctly */
+        }
+
+        .teams {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-grow: 1; /* Allows this section to take available space */
+        }
+
+        .team {
+            flex: 1;
+        }
+
+        .team-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #222; /* Darker team name */
+        }
+
+        .score {
+            font-size: 1.2em;
+            color: #007bff;
+            font-weight: bold; /* Make score bold */
+        }
+
+        .overs {
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .vs {
+            margin: 0 10px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .result {
+            font-weight: bold;
+            color: #28a745; /* Green result */
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .location-date {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .player-of-match {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #555;
+            flex-shrink: 0; /* Prevents this from shrinking */
+        }
+
+        .pom-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .view-centre-button {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px; /* Space above the button */
+            transition: background-color 0.3s ease;
+            width: 100%; /* Make button full width of card */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .view-centre-button:hover {
+            background-color: #e67e00;
+        }
+        .lower {
+            margin-top: 20px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            color: #333;
+            font-family: Tahoma;
+            font-weight: bold;
+            background-color: #c298e9;
+            border: 2px solid #333;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PlayOffs Match Highlights 2025</h1>
+
+    <div class="container">
+        <div class="match-card">
+            <div> <div class="match-type">Qualifier 2</div>
+                <div class="teams">
+                    <div class="team">
+                        <div class="team-name">MUMBAI INDIANS</div>
+                        <div class="score">Yet to bat</div>
+                        <div class="overs">To be Held</div>
+                    </div>
+                    <div class="vs">vs</div>
+                    <div class="team">
+                        <div class="team-name">PUNJAB KINGS</div>
+                        <div class="score">Yet to bat</div>
+                        <div class="overs">To be Held</div>
+                    </div>
+                </div>
+                <div class="result">To be Held</div>
+                <div class="location-date">Narendra Modi Stadium, Ahmedabad<br>1 June 2025, 7:30 pm IST</div>
+                <div class="player-of-match">
+                    Player of the Match:<br>
+                    <span class="pom-name">To be Decide</span><br>
+                    To be Played
+                </div>
+            </div>
+            <button class="view-centre-button" onclick="window.open('https://www.hotstar.com/in/sports/cricket/bold-rcbs-league-stage-supremacy/1271421373/watch','_blank')">View Teams Preperation</button>
+        </div>
+
+        <div class="match-card">
+            <div> <div class="match-type">Final</div>
+                <div class="teams">
+                    <div class="team">
+                        <div class="team-name">TBA</div>
+                        <div class="score">Yet to bat</div>
+                        <div class="overs">To be Held</div>
+                    </div>
+                    <div class="vs">vs</div>
+                    <div class="team">
+                        <div class="team-name">ROYAL CHALLENGERS BENGALURU</div>
+                        <div class="score">Yet to bat</div>
+                        <div class="overs">To be Held</div>
+                    </div>
+                </div>
+                <div class="result">To be Held</div>
+                <div class="location-date">Narendra Modi Stadium, Ahmedabad<br>01 JUN 2025, 7:30 pm IST</div>
+                <div class="player-of-match">
+                    Player of the Match:<br>
+                    <span class="pom-name">To be Decide</span><br>
+                    To be Played
+                </div>
+            </div>
+            <button class="view-centre-button" onclick="window.open('https://www.hotstar.com/in/sports/cricket/mi-eliminate-gt-enter-qualifier-2/1271422081/watch','_blank')">View Teams Preperation</button>
+        </div>
+
+        <div class="match-card">
+            <div> <div class="match-type">Eliminator</div>
+                <div class="teams">
+                    <div class="team">
+                        <div class="team-name">GUJARAT TITANS</div>
+                        <div class="score">208/6</div>
+                        <div class="overs">(20.0 Overs)</div>
+                    </div>
+                    <div class="vs">vs</div>
+                    <div class="team">
+                        <div class="team-name">MUMBAI INDIANS</div>
+                        <div class="score">228/5</div>
+                        <div class="overs">(20.0 Overs)</div>
+                    </div>
+                </div>
+                <div class="result">MUMBAI INDIANS WON BY 20 RUNS (QUALIFIED)</div>
+                <div class="location-date">New PCA Stadium, Chandigarh<br>30 MAY 2025, 7:30 pm IST</div>
+                <div class="player-of-match">
+                    Player of the Match:<br>
+                    <span class="pom-name">Rohit Sharma</span><br>
+                    Runs: 81(50)
+                </div>
+            </div>
+            <button class="view-centre-button" onclick="window.open('https://www.hotstar.com/in/sports/cricket/gt-vs-mi-highlights-eliminator/1540040392/video/highlights/watch','_blank')">View Match Highlights</button>
+        </div>
+
+        <div class="match-card">
+            <div> <div class="match-type">Qualifier 1</div>
+                <div class="teams">
+                    <div class="team">
+                        <div class="team-name">PUNJAB KINGS</div>
+                        <div class="score">101</div>
+                        <div class="overs">(14.1 Overs)</div>
+                    </div>
+                    <div class="vs">vs</div>
+                    <div class="team">
+                        <div class="team-name">ROYAL CHALLENGERS BENGALURU</div>
+                        <div class="score">106/2</div>
+                        <div class="overs">(10.0 Overs)</div>
+                    </div>
+                </div>
+                <div class="result">ROYAL CHALLENGERS BENGALURU WON BY 8 WICKETS (QUALIFIED)</div>
+                <div class="location-date">New PCA Stadium, Chandigarh<br>29 MAY 2025, 7:30 pm IST</div>
+                <div class="player-of-match">
+                    Player of the Match:<br>
+                    <span class="pom-name">Suyash Sharma</span><br>
+                    Wkts: 3/17
+                </div>
+            </div>
+            <button class="view-centre-button" onclick="window.open('https://www.hotstar.com/in/sports/cricket/pbks-vs-rcb-highlights-qualifier-1/1540040389/video/highlights/watch','_blank')">View Match Highlights</button>
+        </div>
+    </div>
+    <div class="lower">
+  <p>The IPL 2025 playoffs were nothing short of electric, packed with jaw-dropping finishes, unexpected upsets, and clutch performances that had fans hooked till the final ball. Big-name teams stumbled when it mattered most, while some underdogs rose like absolute beasts, flipping predictions on their head. But here's the real question — did the new playoff format genuinely make the competition more balanced, or did it just crank up the chaos for views? Either way, it was a wild ride that left cricket fans buzzing.</p>
+</div>
+</body>
+</html>
